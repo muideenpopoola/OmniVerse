@@ -1,0 +1,36 @@
+@import "../base//base";
+
+.box {
+  position: relative;
+}
+
+.media {
+  width: 10px;
+  transform: rotate(-90deg);
+  margin-top: 12rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  position: absolute;
+  right: 0;
+  top: 22rem;
+
+  &__item {
+    list-style: none;
+    max-width: min-content;
+  }
+
+  & span {
+    font-size: 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    color: var(--color-primary-light);
+    padding: 0 .5rem;
+  }
+}
