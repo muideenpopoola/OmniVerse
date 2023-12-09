@@ -1,0 +1,47 @@
+@import "../abstracts/mixins";
+
+.visual {
+  max-width: 120rem;
+  margin: -25rem auto 0 auto;
+  z-index: 100;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__sphere {
+    background: url("../../assets/img/Sphere-Black-Matte\ 1.jpg");
+    background-repeat: no-repeat;
+
+    height: 60rem;
+    width: 60rem;
+    border-radius: 50%;
+    z-index: 100;
+    display: flex;
+    margin-top: 18rem;
+
+    @include absCenter;
+  }
+
+  &__whitepaper {
+    position: relative;
+    transform: translateY(24rem) translateX(-6rem);
+  }
+
+  &__photo {
+    border-radius: 15px;
+  }
+
+  &__download-box {
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: relative;
+    @include absCenter;
+  }
+
+  &__download {
+    @include absCenter;
+  }
+}

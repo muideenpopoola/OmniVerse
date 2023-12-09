@@ -1,0 +1,16 @@
+.background {
+  overflow: hidden;
+  transform: translateY(-12rem);
+  z-index: -10;
+
+  &__text {
+    font-size: 36rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #ffffff33;
+    text-transform: uppercase;
+    transform: translateX(-2rem);
+  }
+}

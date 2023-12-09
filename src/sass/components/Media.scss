@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  z-index: 10;
 
   position: absolute;
   right: 0;
@@ -19,6 +20,7 @@
   &__item {
     list-style: none;
     max-width: min-content;
+    cursor: pointer;
   }
 
   & span {
@@ -31,6 +33,11 @@
     letter-spacing: 0.1rem;
     font-weight: 500;
     color: var(--color-primary-light);
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 }

@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero">
       <div className="hero__title-box">
         <h2 className="hero__title">
-          The <br /> future
+          The <br /> future.
         </h2>
       </div>
       <div className="hero__details-box">

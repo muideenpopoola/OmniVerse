@@ -3,7 +3,6 @@ import "../../sass/components/Media.scss";
 const Media = () => {
   return (
     <div className="box">
-      {" "}
       <ul className="media">
         <li className="media__item">
           <a href="" className="media__link">

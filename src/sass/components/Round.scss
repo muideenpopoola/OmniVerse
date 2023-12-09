@@ -1,0 +1,53 @@
+@import "../abstracts/mixins";
+
+.round {
+  width: 21rem;
+  height: 21rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+
+  display: inline-block;
+  // margin: 0 auto;
+  font-size: 16px;
+  transform: translateY(-3rem);
+
+  &__icon {
+    @include absCenter;
+  }
+}
+
+.round__text {
+  min-width: 0.5em;
+  text-align: center;
+  padding: 30px;
+  margin: 0px;
+
+  .c1 {
+    transform: rotate(-77.045deg);
+  }
+  .c2 {
+    transform: rotate(-63.879deg);
+  }
+  .c3 {
+    transform: rotate(-53.151deg);
+  }
+  .c4 {
+    transform: rotate(-44.374deg);
+  }
+  .c5 {
+    transform: rotate(-33.646deg);
+  }
+  .c6 {
+    transform: rotate(-22.918deg);
+  }
+  .c7 {
+    transform: rotate(-12.191deg);
+  }
+  .c8 {
+    transform: rotate(0.488deg);
+  }
+  .ca {
+    transform: rotate(10.728deg);
+  }
+}
