@@ -1,0 +1,41 @@
+@import "../abstracts/mixins";
+
+.brands {
+  max-width: 140rem;
+  margin: -15rem auto 0 auto;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include respond(tab-port) {
+      margin-top: 3rem;
+    }
+
+    @include respond(phone) {
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+    background-color: rgba(40, 28, 39, 0.8);
+    border-radius: 2rem;
+    padding: 1.2rem 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    z-index: 10;
+
+    @include respond(phone) {
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}

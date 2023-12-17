@@ -1,35 +1,60 @@
 @import "../abstracts/mixins";
 
 .visual {
+  transform: translateY(-12rem);
+
   max-width: 120rem;
-  margin: -25rem auto 0 auto;
-  z-index: 100;
-  position: relative;
+  margin: 0 auto;
 
-  display: flex;
-  justify-content: space-between;
-
-  &__sphere {
-    background: url("../../assets/img/Sphere-Black-Matte\ 1.jpg");
-    background-repeat: no-repeat;
-
-    height: 60rem;
-    width: 60rem;
-    border-radius: 50%;
+  &__box {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
     z-index: 100;
-    display: flex;
-    margin-top: 18rem;
+    position: relative;
 
-    @include absCenter;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-18rem);
+
+    @include respond(tab-land) {
+      transform: translateY(-10rem);
+    }
+
+    @include respond(tab-port) {
+      flex-wrap: wrap;
+      transform: translateY(-8rem);
+    }
+
+    @include respond(small-phone) {
+      transform: translateY(-3rem);
+    }
   }
 
-  &__whitepaper {
+  &__whitepaper:link,
+  &__whitepaper:visited {
     position: relative;
-    transform: translateY(24rem) translateX(-6rem);
+    text-decoration: none;
+    transform: translateY(25rem);
+
+    @include respond(tab-port) {
+      flex: 100%;
+      margin: 0 auto;
+      max-width: 50rem;
+      transform: translateY(0);
+    }
+
+    p {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--color-primary-light);
+      margin-top: 0.7rem;
+    }
   }
 
   &__photo {
     border-radius: 15px;
+    width: 100%;
   }
 
   &__download-box {
@@ -38,10 +63,93 @@
     background-color: var(--color-primary);
     border-radius: 50%;
     position: relative;
-    @include absCenter;
+    position: absolute;
+    top: 18%;
+    left: 40%;
+
+    @include respond(tab-port) {
+      top: 50%;
+      left: 40%;
+
+      height: 7rem;
+      width: 7rem;
+    }
   }
 
   &__download {
     @include absCenter;
+    height: 100%;
+  }
+
+  &__background-top {
+    margin-left: -2.5rem;
+
+    @include respond(tab-port) {
+      margin-top: 7rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 13rem;
+    }
+  }
+  &__background-down {
+    margin-left: 10rem;
+    margin-top: -30rem;
+  }
+
+  &__textbox {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-8rem);
+
+    @include respond(tab-land) {
+      margin-top: 6rem;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 10rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 15rem;
+    }
+
+    @include respond(small-phone) {
+      margin-top: 25rem;
+    }
+
+    h3 {
+      font-size: 5.5rem;
+      font-weight: 700;
+      flex: 0 0 50%;
+
+      @include respond(phone) {
+        font-size: 5rem;
+      }
+
+      @include respond(small-phone) {
+        font-size: 3.5rem;
+      }
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 500;
+      max-width: 45rem;
+    }
+  }
+
+  .sphere {
+    margin-top: 2rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: -1rem;
+    z-index: 10;
   }
 }

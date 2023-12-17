@@ -1,7 +1,10 @@
+@import "../abstracts/mixins";
+
 .background {
   overflow: hidden;
-  transform: translateY(-12rem);
   z-index: -10;
+  max-width: 120rem;
+  margin: 0 auto;
 
   &__text {
     font-size: 36rem;
@@ -11,6 +14,21 @@
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #ffffff33;
     text-transform: uppercase;
-    transform: translateX(-2rem);
+
+    @include respond(tab-land) {
+      font-size: 25rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 20rem;
+    }
+
+    @include respond(phone) {
+      font-size: 15rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 10rem;
+    }
   }
 }

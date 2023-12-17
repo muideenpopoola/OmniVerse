@@ -1,0 +1,85 @@
+@import "../base/base";
+
+.future {
+  max-width: 120rem;
+  margin: 0 auto 0 auto;
+  font-weight: 700;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+  }
+
+  &__left {
+    flex: 0 0 40%;
+
+    @include respond(tab-port) {
+      text-align: center;
+      margin-top: -10rem;
+    }
+  }
+
+  &__header {
+    background-color: var(--color-primary);
+    padding: 2.6rem 2.4rem;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin: 4rem auto 0 auto;
+    max-width: 120rem;
+
+    @include respond(small-phone) {
+      font-size: 1.6rem;
+      padding: 1.6rem 1.4rem;
+    }
+  }
+
+  &__turn {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    transform: rotate(90deg) translateY(4rem);
+    position: absolute;
+    left: 0;
+    top: 8rem;
+  }
+
+  &__title {
+    margin-top: 12rem;
+    font-size: 5.5rem;
+
+    @media screen and (max-width: 1100px) {
+      margin-top: 15rem;
+    }
+
+    @include respond(phone) {
+      font-size: 4rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-weight: 500;
+
+    margin-top: 2rem;
+    line-height: 2.5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__photo {
+    width: 100%;
+  }
+}

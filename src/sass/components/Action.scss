@@ -1,0 +1,77 @@
+@import "../abstracts/mixins";
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    padding: 0 -3rem;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__photo {
+    opacity: 0.1;
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 4rem;
+    font-weight: 800;
+    max-width: 47rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+
+    @include respond(small-phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    @include respond(tab-port) {
+      gap: 2rem;
+    }
+
+    @include respond(phone) {
+      gap: 1rem;
+    }
+
+    @include respond(phone) {
+      svg {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    @include respond(small-phone) {
+      svg {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+
+    a {
+      border-radius: 20px;
+      background: rgba(40, 28, 39, 0.8);
+      padding: 0.6rem 1rem;
+    }
+  }
+}
