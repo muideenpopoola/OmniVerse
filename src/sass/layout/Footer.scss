@@ -101,12 +101,12 @@
     color: inherit;
 
     margin-right: -4rem;
-    flex: 0 0 95%;
-    transition: all 0.2s;
+    transition: all 0.1s;
+    flex: 1;
 
     &:focus {
       outline: none;
-      flex: 1;
+      border: 2px solid #8b8b8b;
     }
 
     &::placeholder {

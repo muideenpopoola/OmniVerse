@@ -46,6 +46,14 @@
     justify-content: space-between;
     margin-top: 4rem;
 
+    a {
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
     @include respond(tab-port) {
       gap: 2rem;
     }

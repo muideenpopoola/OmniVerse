@@ -1,8 +1,26 @@
 import "../../sass/layout/Footer.scss";
 
 import { ReactComponent as Arrow } from "../../assets/svg/Arrow - Right Circle.svg";
+import { useState } from "react";
 
 const Footer = () => {
+  const [inputIsValid, setInputIsValid] = useState(false);
+  const [inputIsTouched, setInputIsTouched] = useState(false);
+
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+  };
+
+  const emailInputHandler = (event) => {
+    if (event.target.value.includes("@")) {
+      setInputIsValid(true);
+    }
+  };
+
+  const inputBlurHandler = (event) => {
+    setInputIsTouched(true);
+  };
+
   return (
     <footer className="footer">
       <div className="footer__unlock">
@@ -59,16 +77,18 @@ const Footer = () => {
           Subscribe to our newsletter to get weekly update on the potential of
           decentralized finance
         </p>
-        <div className="footer__form">
+        <form onSubmit={formSubmitHandler} className="footer__form">
           <input
             type="email"
             placeholder="Enter your mail"
             className="footer__input"
+            onChange={emailInputHandler}
+            onBlur={inputBlurHandler}
           />
-          <button type="submit" className="footer__button">
+          <button className="footer__button">
             <Arrow />
           </button>
-        </div>
+        </form>
       </div>
     </footer>
   );
